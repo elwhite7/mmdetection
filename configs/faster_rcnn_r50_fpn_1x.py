@@ -132,18 +132,18 @@ data = dict(
     workers_per_gpu=2,
     train=dict(
         type=dataset_type,
-        ann_file=data_root + 'VOC2007/Imagesets/Main/trainval.txt',
+        ann_file=data_root + 'ImageSets/Main/trainval.txt',
         img_prefix=data_root + 'VOC2007/JPEGimages',
         pipeline=train_pipeline),
     val=dict(
         type=dataset_type,
-        ann_file=data_root + 'VOC2007/Imagesets/Main/trainval.txt',
-        img_prefix=data_root + 'VOC2007/JPEGimages',
+        ann_file=data_root + 'ImageSets/Main/trainval.txt',
+        img_prefix=data_root + 'JPEGimages',
         pipeline=test_pipeline),
     test=dict(
         type=dataset_type,
-        ann_file=data_root + 'VOC2007/Imagesets/Main/test.txt',
-        img_prefix=data_root + 'VOC2007/JPEGimages',
+        ann_file=data_root + 'ImageSets/Main/test.txt',
+        img_prefix=data_root + 'JPEGimages',
         pipeline=test_pipeline))
 # optimizer
 optimizer = dict(type='SGD', lr=0.02, momentum=0.9, weight_decay=0.0001)
